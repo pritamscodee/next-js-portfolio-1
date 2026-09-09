@@ -39,24 +39,24 @@ function MeoPreview() {
           </span>
           <span className="text-[10px] text-[#D09255] font-mono">STM · LTM · CTX</span>
         </div>
-        <div className="flex-1 flex items-center px-6 py-6 gap-8">
-          <div className="flex-1">
-            <h3 className="text-[22px] font-medium leading-[1.1] tracking-[-0.035em] text-[#F3EDE4] max-w-[18ch]">
+        <div className="flex-1 flex items-center px-4 sm:px-6 py-6 gap-4 sm:gap-8">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-[18px] sm:text-[22px] font-medium leading-[1.1] tracking-[-0.035em] text-[#F3EDE4] max-w-[18ch]">
               Address a memory. Get a grounded answer.
             </h3>
             <p className="mt-2 text-[11px] leading-relaxed text-[#C9C0AE] max-w-[30ch]">
               A query is a current through short-term cores, the knowledge graph, and the context window.
             </p>
-            <div className="mt-3 flex gap-2">
+            <div className="mt-3 flex flex-wrap gap-2">
               <span className="inline-flex h-7 items-center rounded bg-[#D09255] px-3 text-[10px] font-medium text-[#1C1F1A]">
                 Query the plane
               </span>
-              <span className="inline-flex h-7 items-center rounded border border-[#D09255]/35 px-3 text-[10px] text-[#F0E2C4] font-mono">
+              <span className="hidden sm:inline-flex h-7 items-center rounded border border-[#D09255]/35 px-3 text-[10px] text-[#F0E2C4] font-mono">
                 Watch the current
               </span>
             </div>
           </div>
-          <div className="shrink-0 rounded-lg border border-[#D09255]/25 bg-[#2F362C] p-2">
+          <div className="hidden sm:block shrink-0 rounded-lg border border-[#D09255]/25 bg-[#2F362C] p-2">
             <svg viewBox={`0 0 ${42 * COLS + 16} ${42 * ROWS + 16}`} className="w-44 h-28">
               <rect width={42 * COLS + 16} height={42 * ROWS + 16} rx="8" fill="#1C1F1A" />
               {Array.from({ length: ROWS * COLS }, (_, i) => {
@@ -111,12 +111,12 @@ function PitchAIPreview() {
           </span>
           <span className="text-[10px] text-white/40">YC-style decks</span>
         </div>
-        <div className="flex-1 flex items-center px-6 py-6 gap-6">
-          <div className="flex-1">
+        <div className="flex-1 flex items-center px-4 sm:px-6 py-6 gap-4 sm:gap-6">
+          <div className="flex-1 min-w-0">
             <span className="inline-flex items-center gap-1 rounded-full border border-[#4ade80]/30 bg-[#4ade80]/10 px-2 py-0.5 text-[9px] font-medium text-[#4ade80] mb-2">
               ✦ From idea to deck
             </span>
-            <h3 className="text-[22px] font-semibold tracking-tight text-white leading-[1.1] max-w-[22ch]">
+            <h3 className="text-[18px] sm:text-[22px] font-semibold tracking-tight text-white leading-[1.1] max-w-[22ch]">
               Turn a startup idea into a pitch deck that raises.
             </h3>
             <p className="mt-2 text-[11px] leading-relaxed text-white/50 max-w-[30ch]">
@@ -128,7 +128,7 @@ function PitchAIPreview() {
               </span>
             </div>
           </div>
-          <div className="shrink-0 relative w-44 h-28">
+          <div className="hidden sm:block shrink-0 relative w-44 h-28">
             {[
               { label: "Problem", rotate: -6, x: 0, z: 0 },
               { label: "Solution", rotate: 0, x: 52, z: 1 },

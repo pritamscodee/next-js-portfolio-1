@@ -53,6 +53,7 @@ const Contact = () => {
             alt="Contact Illustrations"
             width={600}
             height={600}
+            className="w-full h-auto max-w-xs sm:max-w-md lg:max-w-lg"
           />
         </motion.div>
       </div>

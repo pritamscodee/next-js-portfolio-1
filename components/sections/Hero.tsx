@@ -30,17 +30,17 @@ const Hero = () => {
                     <li><span className="text-primary font-semibold">Full-stack product engineering</span> — Next.js frontends, Better Auth, Prisma databases, and background job processing</li>
                     <li><span className="text-primary font-semibold">Production infrastructure</span> — Docker, CI/CD with CircleCI, Redis, RabbitMQ, and WebSockets</li>
                 </ul>
-                <div className="flex gap-4">
-                <Button variant={"default"} className="gap-2">
-                    <Mail className="w-4 h-4"/>
-                    Contact Me
-                </Button>
-                <Link href={"https://github.com/pritamscodee"} target="_blank">
-                <Button variant={"outline"} className="gap-2">
-                    <Github className="w-4 h-4"/>
-                    Github
-                </Button>
-                </Link>
+                <div className="flex flex-wrap gap-3 sm:gap-4">
+                    <Button variant={"default"} className="gap-2">
+                        <Mail className="w-4 h-4"/>
+                        Contact Me
+                    </Button>
+                    <Link href={"https://github.com/pritamscodee"} target="_blank">
+                        <Button variant={"outline"} className="gap-2">
+                            <Github className="w-4 h-4"/>
+                            Github
+                        </Button>
+                    </Link>
                 </div>
             </motion.div>
 
@@ -56,6 +56,7 @@ const Hero = () => {
                 width={500}
                 height={500}
                 priority
+                className="w-full h-auto max-w-[300px] sm:max-w-md lg:max-w-lg"
                 />
             </motion.div>
         </div>
