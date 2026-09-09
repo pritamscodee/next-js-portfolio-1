@@ -1,0 +1,19 @@
+.npmrc
+  s_c0acdd9616639a::t_45d6597d5d4935 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "f64c18570b4f66d8462ae80234488cf4070a347b",
+  "prompts": {},
+  "sessions": {
+    "s_c0acdd9616639a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f79c96c2effeiZkis1oTkXpjFc",
+        "model": "unknown"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    }
+  }
+}
