@@ -1,0 +1,140 @@
+public/logos/circleci.svg
+  s_c2661a86cbfa13::t_6346a34017b731 1
+app/layout.tsx
+  s_c2661a86cbfa13::t_e6f85e5a5459e3 12
+  s_a2e1b21b31d79d::t_49b7b741bdbce7 13
+public/logos/openai.svg
+  s_c2661a86cbfa13::t_db954128729181 1
+public/logos/tanstack-query.svg
+  s_c2661a86cbfa13::t_9a90b121735446 1-10
+components/layout/footer.tsx
+  s_c2661a86cbfa13::t_b366b473770563 12
+  s_c2661a86cbfa13::t_f98720276f425e 18
+  s_c0acdd9616639a::t_27a3c852cf1165 23
+  s_c2661a86cbfa13::t_d70391b9f8897b 75
+  s_64851819ba305c::t_212449c4b6a288 13-14,28,57,60-61,65-66
+public/logos/claude.svg
+  s_c2661a86cbfa13::t_ba184602ab2789 1
+public/logos/git.svg
+  s_c2661a86cbfa13::t_bcc9ef89cf8b49 1
+app/api/contact/route.ts
+  s_c0acdd9616639a::t_e30549e050ada3 1-49
+package.json
+  s_c0acdd9616639a::t_9ba078db65ec3c 57
+public/logos/docker.svg
+  s_c2661a86cbfa13::t_bcc9ef89cf8b49 1
+public/logos/websocket.svg
+  s_c2661a86cbfa13::t_958b9cbb937391 1
+components/layout/header.tsx
+  s_64851819ba305c::t_9bd0ca2ed9fa4a 22
+  s_c2661a86cbfa13::t_cc791e0f0deb6d 35
+components/sections/Skills.tsx
+  s_64851819ba305c::t_5537d17217dfa1 11-17,22,32-34,37
+constants/index.ts
+  s_64851819ba305c::t_5c0eb02e3bd4cd 25,37-38
+  s_64851819ba305c::t_60f785eb216473 3,6,8-11,15-19,22,24,27-28,33,36,39-40,45,47
+  s_c2661a86cbfa13::t_6e21e782cf92fd 12-14
+  s_64851819ba305c::t_1e82ca5476cf35 42-44
+  s_64851819ba305c::t_4066f1c65d7da6 30-32
+  s_64851819ba305c::t_0b68d343a1148b 26
+  s_64851819ba305c::t_f2e8d549de5641 7
+  s_c2661a86cbfa13::t_a8f79ba976de13 2,4-5
+components/sections/Projects.tsx
+  s_64851819ba305c::t_eb55f84a3e4ab5 215
+  s_64851819ba305c::t_64745dc718edce 6,168,171,178,193,195-196,254,298
+  s_64851819ba305c::t_5142d1c54f1393 169
+  s_64851819ba305c::t_b882f3594983c3 170,172-177,179-192,194
+  s_64851819ba305c::t_6f90d4b6c6b2e6 220
+  s_64851819ba305c::t_c5cd9ecbd6f0e9 9-167,197-201,221-253,255,257-261,263,266,268,270-273,275-285,287-296,300-303
+public/logos/nextjs.svg
+  s_c2661a86cbfa13::t_e9d82a7e4cddc4 1
+app/api/github/route.ts
+  s_64851819ba305c::t_a4f2748d6be377 49,52,54
+  s_64851819ba305c::t_37a8cf56126c29 35,37-39,61-66,72
+  s_64851819ba305c::t_a6d7ca7cef6c82 36,40-43,69-71,73-74
+components/github-stats.tsx
+  s_64851819ba305c::t_60b61f99f40b9f 16-18,75-76,80-92,94,97,124,132,138-150,158,167-168,171-172,176-183,185-221
+  s_64851819ba305c::t_c4dfc7f9e9720e 5
+public/logos/redis.svg
+  s_c2661a86cbfa13::t_3483132f43079b 1-11
+public/logos/rabbitmq.svg
+  s_c2661a86cbfa13::t_bcc9ef89cf8b49 1
+public/logos/mastra.svg
+  s_c2661a86cbfa13::t_b9c115fe26a78f 1
+  s_c2661a86cbfa13::t_60c1a9f1cd8ab4 2-17
+components/sections/Contact.tsx
+  s_c2661a86cbfa13::t_a04692933552c7 26
+  s_64851819ba305c::t_e91507bb507de9 21
+  s_64851819ba305c::t_571d1a25bc3eb1 18
+  s_c0acdd9616639a::t_ab9cff1f5e0053 31
+public/logos/react.svg
+  s_c2661a86cbfa13::t_bcc9ef89cf8b49 1
+components/sections/Hero.tsx
+  s_c2661a86cbfa13::t_7af1b6f34c3ba7 27,32
+  s_64851819ba305c::t_59d708760ef992 19
+  s_c2661a86cbfa13::t_7b2fa2e4d875ab 38
+  s_64851819ba305c::t_7c4755bdec8fea 22,24-26,28-31
+  s_c2661a86cbfa13::t_1cf765f28ac4f9 18,21,23
+components/contact-form.tsx
+  s_c0acdd9616639a::t_d38f621eff3a97 110-111
+  s_c0acdd9616639a::t_782bd5adb7ccca 35,37-51,53-56
+  s_c0acdd9616639a::t_2415daae66078b 82
+  s_c2661a86cbfa13::t_72bbe950c39b39 69
+  s_c0acdd9616639a::t_f3babd9960678f 52
+public/logos/express.svg
+  s_c2661a86cbfa13::t_6346a34017b731 1
+app/page.tsx
+  s_c2661a86cbfa13::t_b80ed0b04cb70a 27
+public/logos/typescript.svg
+  s_c2661a86cbfa13::t_bcc9ef89cf8b49 1
+test-github.js
+  s_64851819ba305c::t_4b5fa1c262cc14 1-37
+public/logos/nestjs.svg
+  s_c2661a86cbfa13::t_bcc9ef89cf8b49 1
+public/logos/better-auth.svg
+  s_c2661a86cbfa13::t_066c9fc516e9a2 1
+package-lock.json
+  s_c0acdd9616639a::t_938efbae52ce0d 56,79,716,734,749,759,769,776,931,945,955,1320,2657-2662,2782,2792,3078,3091,3107,3114,3128,3364,3377,3407,3491,3538,3563,4086,4099,4117,4134,4149,4443,4450,4495,4530,5269-5274,5279,5302,5363,5407,5422,5542,5563,5576,5586,5740,5884,5937,5988,6014,6043,6069,6248,6273,6289,6412,6425,6473,6499,6509,6546,6578,6707,6726,6937,6967,6977,6984,7007,7020,7030,7046-7051,7056,7085,7103,7123,7159,7185,7199,7237,7425,7435,7532-7552,7557,7598,7609,7796,7809,7895,7940-7949,7962,7981,7996,8006,8013,8139,8156,8169,8225,8261,8284,8331,8348,8371,8381,8400,8435,8657,8699,8813,8832,8850,8860,8867,8882,8895,8908
+public/logos/aws.svg
+  s_c2661a86cbfa13::t_000200ae2e080f 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "fa560e785b07bd66c0c85ac751f8b0f1bd3c64cd",
+  "prompts": {},
+  "sessions": {
+    "s_64851819ba305c": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f79f65daaffe02aEaXmo41QvmV",
+        "model": "unknown"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    },
+    "s_a2e1b21b31d79d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c7bd3b52-d984-4730-ba36-a8463ae1fef5",
+        "model": "grok-4.6"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    },
+    "s_c0acdd9616639a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f79c96c2effeiZkis1oTkXpjFc",
+        "model": "unknown"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    },
+    "s_c2661a86cbfa13": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f83d8afe6ffeWwi4862lB3VkN2",
+        "model": "unknown"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    }
+  }
+}
