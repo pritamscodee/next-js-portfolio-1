@@ -1,6 +1,6 @@
 const { Octokit } = require("octokit");
 const octokit = new Octokit({
-  auth: "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",
+  auth: process.env.GITHUB_TOKEN,
 });
 
 const query = `
