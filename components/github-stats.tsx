@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Calendar, GitBranch, GitCommit, Star } from "lucide-react";
+import { Calendar, GitBranch, GitCommit, Star, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,9 @@ interface Props {
 interface GithubStats {
   user: {
     totalContribution: number;
+    totalRepos: number;
+    totalStars: number;
+    followers: number;
   };
   contributions: {
     count: number;
@@ -36,7 +39,6 @@ const GithubStats = ({ username }: Props) => {
 
         const data = await response.json();
         setStats(data)
-        console.log(data)
       } catch (error) {
         setError("failed to fetch github stats")
         console.error(error)
@@ -70,28 +72,36 @@ const GithubStats = ({ username }: Props) => {
 
   if(!stats) return null;
 
-  // // Calculate current streak
-  const currentStreak = stats.contributions.slice().reverse().reduce((streak , day , index , array)=>{
+  // Calculate current streak (consecutive days with contributions from today backwards)
+  const currentStreak = stats.contributions.slice().reverse().reduce((streak, day, index) => {
     if(index === 0 && day.count === 0) return 0;
     if(day.count > 0) return streak + 1;
-
     return streak;
-  },0)
+  }, 0);
 
-  // // Calculate max contributions in a day
+  // Calculate longest streak
+  let longestStreak = 0;
+  let tempStreak = 0;
+  for (const day of stats.contributions) {
+    if (day.count > 0) {
+      tempStreak++;
+      if (tempStreak > longestStreak) longestStreak = tempStreak;
+    } else {
+      tempStreak = 0;
+    }
+  }
+
+  // Calculate max contributions in a day
   const maxContributions = Math.max(...stats.contributions.map(day=>day.count));
 
-  // // CAlculate contribution levels
+  // Calculate contribution levels
   const getContributionLevel = (count:number)=>{
     if(count === 0) return "bg-muted";
     const percentage = (count / maxContributions) * 100;
-
     if(percentage <=25) return "bg-primary/30";
     if(percentage <=50) return "bg-primary/50";
     if(percentage <=75) return "bg-primary/70";
-
     return "bg-primary";
-
   }
 
   return (
@@ -111,7 +121,7 @@ const GithubStats = ({ username }: Props) => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -119,10 +129,22 @@ const GithubStats = ({ username }: Props) => {
             className="p-4 rounded-lg bg-secondary/50 backdrop-blur-sm"
           >
             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-primary mb-2" />
-            <p className="text-sm text-muted-foreground">Current Streak</p>
+            <p className="text-xs text-muted-foreground">Current Streak</p>
             <p className="text-xl sm:text-2xl font-bold text-primary">
-              {" "}
               {currentStreak} days
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.15 }}
+            className="p-4 rounded-lg bg-secondary/50 backdrop-blur-sm"
+          >
+            <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-primary mb-2" />
+            <p className="text-xs text-muted-foreground">Longest Streak</p>
+            <p className="text-xl sm:text-2xl font-bold text-primary">
+              {longestStreak} days
             </p>
           </motion.div>
 
@@ -133,7 +155,7 @@ const GithubStats = ({ username }: Props) => {
             className="p-4 rounded-lg bg-secondary/50 backdrop-blur-sm"
           >
             <GitBranch className="w-4 h-4 sm:w-5 sm:h-5 text-primary mb-2" />
-            <p className="text-sm text-muted-foreground">Total Contributions</p>
+            <p className="text-xs text-muted-foreground">Total Contributions</p>
             <p className="text-xl sm:text-2xl font-bold">
               {stats.user.totalContribution.toLocaleString()}
             </p>
@@ -142,53 +164,61 @@ const GithubStats = ({ username }: Props) => {
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="p-4 rounded-lg bg-secondary/50 backdrop-blur-sm sm:col-span-2 lg:col-span-1"
+            transition={{ delay: 0.25 }}
+            className="p-4 rounded-lg bg-secondary/50 backdrop-blur-sm"
           >
             <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary mb-2" />
-            <p className="text-sm text-muted-foreground">Best Day</p>
-            <p className="text-xl sm:text-2xl font-bold">{maxContributions} commits</p>
+            <p className="text-xs text-muted-foreground">Total Stars</p>
+            <p className="text-xl sm:text-2xl font-bold">{stats.user.totalStars}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="p-4 rounded-lg bg-secondary/50 backdrop-blur-sm"
+          >
+            <Users className="w-4 h-4 sm:w-5 sm:h-5 text-primary mb-2" />
+            <p className="text-xs text-muted-foreground">Followers</p>
+            <p className="text-xl sm:text-2xl font-bold">{stats.user.followers}</p>
           </motion.div>
         </div>
 
-<div className="space-y-4">
-<h4 className="text-sm font-medium text-muted-foreground">Last 30 days</h4>
-<div className="overflow-x-auto pb-4">
-    <div className="grid grid-rows-1 grid-flow-col gap-1 min-w-[600px]">
-    <TooltipProvider>
-      {
-        stats.contributions.slice(-30).map((day , index)=>(
-          <motion.div
-          key={day.date}
-          initial={{scale:0}}
-          animate={{scale:1}}
-          transition={{delay:index * 0.02}}
-          > 
-          <Tooltip>
-            <TooltipTrigger>
-              <div
-              className={cn("h-6 w-6 sm:h-8 sm:w-8 rounded-sm" , getContributionLevel(day.count) , "transition-all duration-200 hover:scale-110")}
-              />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p className="text-xs font-semibold text-black">
-              {day.count} contributions on {
-                new Date(day.date).toLocaleDateString(
-                  undefined,
-                  {month:"short" , day:"numeric"}
-                )
-              }
-              </p>
-            </TooltipContent>
-          </Tooltip>
-
-          </motion.div>
-        ))
-      }
-    </TooltipProvider>
-    </div>
-</div>
-</div>
+        <div className="space-y-4">
+          <h4 className="text-sm font-medium text-muted-foreground">Last 30 days</h4>
+          <div className="overflow-x-auto pb-4">
+            <div className="grid grid-rows-1 grid-flow-col gap-1 min-w-[600px]">
+              <TooltipProvider>
+                {stats.contributions.slice(-30).map((day, index) => (
+                  <motion.div
+                    key={day.date}
+                    initial={{scale:0}}
+                    animate={{scale:1}}
+                    transition={{delay:index * 0.02}}
+                  >
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <div
+                          className={cn("h-6 w-6 sm:h-8 sm:w-8 rounded-sm", getContributionLevel(day.count), "transition-all duration-200 hover:scale-110")}
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="text-xs font-semibold text-black">
+                          {day.count} contributions on {
+                            new Date(day.date).toLocaleDateString(
+                              undefined,
+                              {month:"short", day:"numeric"}
+                            )
+                          }
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </motion.div>
+                ))}
+              </TooltipProvider>
+            </div>
+          </div>
+        </div>
 
       </motion.div>
     </Card>

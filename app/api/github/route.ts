@@ -32,28 +32,46 @@ export async function GET(request: NextRequest) {
                 }
               }
             }
+            repositories(ownerAffiliations: OWNER, first: 100) {
+              totalCount
+              nodes {
+                stargazerCount
+              }
+            }
+            followers {
+              totalCount
+            }
           }
         }
       `;
 
     const response = await octokit.graphql(query, { username });
-    //   @ts-ignore
+    // @ts-expect-error - GraphQL response type inference
     const calendar = response.user.contributionsCollection.contributionCalendar;
 
-    //   Flatten the weeks array to get all contribution days
-
-    // @ts-ignore
+    // @ts-expect-error - calendar type not fully inferred
     const contributions = calendar.weeks.flatMap((week) =>
-      // @ts-ignore
+      // @ts-expect-error - week type not fully inferred
       week.contributionDays.map((day) => ({
         count: day.contributionCount,
         date: day.date,
       }))
     );
 
+    // @ts-expect-error - user type not fully inferred
+    const totalStars = response.user.repositories.nodes.reduce(
+      (sum: number, repo: { stargazerCount: number }) => sum + repo.stargazerCount,
+      0
+    );
+
     return NextResponse.json({
         user:{
-            totalContribution:calendar.totalContributions
+            totalContribution: calendar.totalContributions,
+            // @ts-expect-error - user type not fully inferred
+            totalRepos: response.user.repositories.totalCount,
+            totalStars,
+            // @ts-expect-error - user type not fully inferred
+            followers: response.user.followers.totalCount,
         },
         contributions
     })

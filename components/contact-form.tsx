@@ -32,12 +32,28 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // backend logic here
-    console.log(values);
-    toast("Message sent sucessfully.")
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast.success("Message sent successfully.");
+      form.reset();
+    } catch {
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -50,7 +66,7 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Suraj Jha" {...field} />
+                <Input placeholder="Pritam Mondal" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -63,7 +79,7 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
                 <Input placeholder="jhon@example.com" {...field} />
               </FormControl>
@@ -91,8 +107,8 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
-          Send message
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Send message"}
         </Button>
       </form>
     </Form>

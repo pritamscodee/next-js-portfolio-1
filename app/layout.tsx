@@ -9,8 +9,8 @@ import { Footer } from "@/components/layout/footer";
 const inter = Inter({subsets:["latin"]});
 
 export const metadata: Metadata = {
-  title: "Suraj Jha | Fullstack Developer.",
-  description: "Fullstack developer specializing in modern web technologies.",
+  title: "Pritam Mondal | Backend & Harness Engineer",
+  description: "Backend & Harness Engineer: can make agentic AI-ready backends with LLM SDKs (OpenAI, Claude, Mastra), secure RAG apps with guardrails, architect fault-tolerant systems with Docker and CircleCI, and production databases at scale (Redis, PostgreSQL, RabbitMQ).",
 };
 
 export default function RootLayout({

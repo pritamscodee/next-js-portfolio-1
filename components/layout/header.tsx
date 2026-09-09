@@ -18,10 +18,8 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
-    { label: "Project", href: "#projects" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -34,7 +32,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href={"/"} className="text-xl font-bold text-primary">
-            Suraj Jha
+            Pritam Mondal
           </Link>
 
           {/* Desktop Menu */}

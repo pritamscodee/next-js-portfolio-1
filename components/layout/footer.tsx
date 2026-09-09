@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
-import { motion } from "framer-motion";
 
 export function Footer() {
   return (
@@ -10,24 +9,23 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold text-primary mb-4">Suraj Jha</h3>
-            <p className="text-muted-foreground mb-4">
-              Full Stack Developer crafting modern web experiences with a focus on user
-              experience and performance.
+            <h3 className="text-xl font-bold text-primary mb-4">Pritam Mondal</h3>
+            <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+              Backend & Harness Engineer building agentic AI systems with persistent memory, multi-agent pipelines, and production infrastructure.
             </p>
             <div className="flex gap-4">
               <Button variant="outline" size="icon" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/pritamscodee" target="_blank" rel="noopener noreferrer">
                   <Github className="w-4 h-4" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/pritam-mondal-3aa402381/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="mailto:john@example.com">
+                <a href="mailto:pritam@example.com">
                   <Mail className="w-4 h-4" />
                 </a>
               </Button>
@@ -37,11 +35,6 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </a>
-              </li>
               <li>
                 <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">
                   Skills
@@ -61,19 +54,16 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">Projects</h4>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">
-                San Francisco, CA
-              </li>
               <li>
-                <a href="mailto:john@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  john@example.com
+                <a href="https://meo-six-liard.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  Meo
                 </a>
               </li>
               <li>
-                <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                  +1 (234) 567-890
+                <a href="https://pitchai-rouge.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  PitchAI
                 </a>
               </li>
             </ul>
@@ -82,7 +72,7 @@ export function Footer() {
 
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
+            © {new Date().getFullYear()} Pritam Mondal. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-red-500" /> using Next.js

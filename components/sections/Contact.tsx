@@ -15,20 +15,20 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold mb-6">
-            Let's <span className="text-primary">Connect</span>
+            Let&apos;s <span className="text-primary">Connect</span>
           </h2>
           <p className="text-muted-foreground mb-8">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your visions.
           </p>
           <div className="flex gap-4 mb-8">
             <Button variant={"outline"} size={"icon"} asChild>
-              <a href="https://github.com/Aestheticsuraj234" target="_blank">
+              <a href="https://github.com/pritamscodee" target="_blank">
                 <Github className="w-5 h-5" />
               </a>
             </Button>
             <Button variant={"outline"} size={"icon"} asChild>
-              <a href="#" target="_blank">
+              <a href="https://www.linkedin.com/in/pritam-mondal-3aa402381/" target="_blank">
                 <Linkedin className="w-5 h-5" />
               </a>
             </Button>
