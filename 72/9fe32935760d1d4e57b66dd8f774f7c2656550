@@ -1,0 +1,29 @@
+components/sections/Hero.tsx
+  s_c0acdd9616639a::t_890d8c5365a032 33-43
+  s_c0acdd9616639a::t_3f1e2905d0ec4e 59
+components/github-stats.tsx
+  s_c0acdd9616639a::t_ebb59c3743e6bc 124
+app/page.tsx
+  s_c0acdd9616639a::t_6348152768b615 13
+components/sections/Projects.tsx
+  s_c0acdd9616639a::t_92b6be39dcafd5 114-115,119,131
+  s_c0acdd9616639a::t_ac76af321192ea 42-44,50,54,59
+components/sections/Contact.tsx
+  s_c0acdd9616639a::t_b9b191eb516fbb 56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "729fe32935760d1d4e57b66dd8f774f7c2656550",
+  "prompts": {},
+  "sessions": {
+    "s_c0acdd9616639a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f79c96c2effeiZkis1oTkXpjFc",
+        "model": "unknown"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    }
+  }
+}
