@@ -1,0 +1,19 @@
+test-github.js
+  s_c0acdd9616639a::t_5a7dc18a60cab5 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "ac91cc9920c0a983c9d5c172b08a76747af011ec",
+  "prompts": {},
+  "sessions": {
+    "s_c0acdd9616639a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f79c96c2effeiZkis1oTkXpjFc",
+        "model": "unknown"
+      },
+      "human_author": "pritamscodee <codewithpritam29@gmail.com>"
+    }
+  }
+}
